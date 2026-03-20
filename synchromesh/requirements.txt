@@ -1,0 +1,41 @@
+# -----------------------------
+# Core Framework
+# -----------------------------
+streamlit
+
+# -----------------------------
+# AI & LLM Connectivity
+# -----------------------------
+google-generativeai
+
+# -----------------------------
+# MCP Integration
+# -----------------------------
+modelcontextprotocol
+
+# -----------------------------
+# Data Processing & Evaluation
+# -----------------------------
+pandas
+numpy
+pyyaml
+python-dotenv
+pydantic
+
+# -----------------------------
+# Visualization
+# -----------------------------
+plotly
+altair
+streamlit-extras
+
+# -----------------------------
+# Networking
+# -----------------------------
+httpx
+
+# -----------------------------
+# Runtime Utilities
+# -----------------------------
+typing-extensions
+watchdog

@@ -1,0 +1,59 @@
+project:
+  name: "SynchroMesh Orchestrator"
+  version: "1.0.0"
+  env: "development"
+
+runtime:
+  default_mode: "mock"
+  supported_modes:
+    - mock
+    - demo
+    - real
+
+llm:
+  provider: "google"
+  model_name: "gemini-1.5-pro"
+  temperature: 0.2
+  max_tokens: 4096
+
+mcp:
+  figma:
+    sync_interval: 3600
+  github:
+    default_branch: "main"
+    pr_prefix: "synchromesh/ui-sync-"
+    repo_root: "./target_repo"
+
+demo:
+  local_repo_base: "./target_repo"
+
+design_tokens:
+  format: "var(--{token})"
+
+governance:
+  auto_apply_low_risk: true
+  require_approval_for:
+    - MEDIUM
+    - HIGH
+  max_files_per_sync: 10
+  restricted_directories:
+    - "src/core/auth"
+    - "public"
+
+metrics:
+  target_parity_score: 95.0
+  export_format: "json"
+  log_retention_days: 30
+  trace_path: "evaluation/traces/"
+
+outputs:
+  base_path: "outputs/"
+
+logging:
+  level: "INFO"
+  file: "logs/synchromesh.log"
+
+ui:
+  theme: "dark"
+  show_reasoning_traces: true
+  refresh_rate: 5
